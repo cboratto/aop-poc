@@ -2,11 +2,9 @@
 
 namespace App;
 
-require_once __DIR__ . '/autoload_aspect.php';
+use App\Example;
 
-use Go\Instrument\Transformer\FilterInjectorTransformer;
-
-require_once FilterInjectorTransformer::rewrite(__DIR__ . '/Example.php');
+require_once __DIR__ . '/bootstrap.php';
 
 $example = new Example();
-$example->test();
+$example->test2("para1-value", "param2-value" );
